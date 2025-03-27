@@ -1,0 +1,28 @@
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    public Node(int data) {
+        this.data = data;
+        left = right = null;
+    }
+}
+
+public class BinaryTree {
+    Node root;
+
+    // Создание дерева с корнем
+    public BinaryTree(int rootData) {
+        root = new Node(rootData);
+    }
+
+    // Рекурсивный обход в глубину (in-order)
+    public void traverseInOrder(Node node) {
+        if (node != null) {
+            traverseInOrder(node.left);
+            System.out.print(node.data + " ");
+            traverseInOrder(node.right);
+        }
+    }
+}
