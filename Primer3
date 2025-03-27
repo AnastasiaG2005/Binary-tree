@@ -1,0 +1,16 @@
+// Добавить методы для других обходов
+public void traversePreOrder(Node node) {
+    if (node != null) {
+        System.out.print(node.data + " ");
+        traversePreOrder(node.left);
+        traversePreOrder(node.right);
+    }
+}
+
+public void traversePostOrder(Node node) {
+    if (node != null) {
+        traversePostOrder(node.left);
+        traversePostOrder(node.right);
+        System.out.print(node.data + " ");
+    }
+}
